@@ -1,9 +1,7 @@
 
 import streamlit as st
-import pyautogui
 import pyperclip
 from time import sleep
-import pywinauto
 import re
 
 st.write("공문분석프로그램")
@@ -12,13 +10,11 @@ text = st.text_area("Your text:")
 
 btn_click=st.button("confirm",key='confirm_btn')
 
-win=pyautogui.getActiveWindow()
-
 
 title = st.text_input('Movie title', 'Life of Brian')
 st.write('The current movie title is', title)
 
-m = p = re.compile('[a-z]+')
+p = re.compile('[a-z]+')
 
 
 if btn_click:
